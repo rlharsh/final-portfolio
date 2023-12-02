@@ -98,3 +98,45 @@
 .path-selected {
   color: var(--color-text) !important;
 }
+
+.not-visible {
+  display: none !important;
+}
+
+.code-footer {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+
+  button {
+    padding: 1rem;
+    outline: 1px solid var(--color-outline);
+  }
+}
+
+.markdown-content {
+  padding: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  strong {
+    font-weight: 700;
+    color: var(--color-accent-green);
+  }
+
+  p::after {
+    content: "\a\a ";
+    white-space: pre;
+  }
+
+  code {
+    margin-top: 1rem;
+    padding: 1rem;
+    color: var(--color-accent-green);
+
+    &:after {
+      content: "\a\a";
+      white-space: pre;
+    }
+  }
+}

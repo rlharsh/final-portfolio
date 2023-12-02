@@ -37,6 +37,12 @@
     @include breakpoint(min, medium) {
       display: none;
     }
+
+    button > i {
+      font-size: 1.4rem;
+      color: var(--color-white);
+      padding-right: 0.4rem;
+    }
   }
 
   &__nav {

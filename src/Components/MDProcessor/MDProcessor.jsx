@@ -3,12 +3,12 @@ import hljs from "highlight.js";
 
 import "highlight.js/styles/night-owl.css";
 import { DataSet } from "../../Providers/SectionProvider";
+import Markdown from "marked-react";
 
 const MDProcessor = ({ sectionName, title }) => {
   const [markdownContent, setMarkdownContent] = useState("");
   const [loading, setLoading] = useState(true);
-
-  const { subSection } = useContext(DataSet);
+  const [codeShowing, setCodeShowing] = useState(true);
 
   const codeRef = useRef();
 
@@ -43,15 +43,20 @@ const MDProcessor = ({ sectionName, title }) => {
     }
   }, [markdownContent]); // Depend on markdownContent
 
-  const renderedContent = markdownContent.split("\n").map((line, index) => (
-    <pre key={index}>
-      <code>{line}</code>
-    </pre>
-  ));
+  useEffect(() => {
+    // Only attempt to highlight if codeShowing is true and the code block is mounted in the DOM
+    if (codeShowing && codeRef.current) {
+      hljs.highlightElement(codeRef.current);
+    }
+  }, [codeShowing, markdownContent]);
 
   if (loading) {
     return <div>Loading...</div>;
   }
+
+  const toggleCode = () => {
+    setCodeShowing((prevState) => !prevState);
+  };
 
   return (
     <div className="code-block-container">
@@ -64,12 +69,25 @@ const MDProcessor = ({ sectionName, title }) => {
           <i className="ri-clipboard-fill"></i>
         </button>
       </div>
-      {/* The pre and code tags are used here to encapsulate the fetched Markdown content */}
-      <pre>
-        <code ref={codeRef} className="hljs md code-block">
-          {markdownContent}
-        </code>
-      </pre>
+      {/* This pre and code block is for displaying code, if needed */}
+      {codeShowing && (
+        <pre>
+          <code ref={codeRef} className="hljs md code-block">
+            {markdownContent}
+          </code>
+        </pre>
+      )}
+      {/* This div is for displaying rendered markdown content */}
+      {!codeShowing && (
+        <div className="markdown-content">
+          <Markdown>{markdownContent}</Markdown>
+        </div>
+      )}
+      <div className="code-footer">
+        <button onClick={toggleCode} className="button button--clear">
+          {codeShowing ? "Show Rendered Content" : "Show Code"}
+        </button>
+      </div>
     </div>
   );
 };

@@ -96,3 +96,40 @@
 .path-selected {
   color: var(--color-text) !important;
 }
+
+.not-visible {
+  display: none !important;
+}
+
+.code-footer {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+.code-footer button {
+  padding: 1rem;
+  outline: 1px solid var(--color-outline);
+}
+
+.markdown-content {
+  padding: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.markdown-content strong {
+  font-weight: 700;
+  color: var(--color-accent-green);
+}
+.markdown-content p::after {
+  content: "\a\a";
+  white-space: pre;
+}
+.markdown-content code {
+  margin-top: 1rem;
+  padding: 1rem;
+  color: var(--color-accent-green);
+}
+.markdown-content code:after {
+  content: "\a\a";
+  white-space: pre;
+}

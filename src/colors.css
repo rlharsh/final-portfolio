@@ -1,0 +1,33 @@
+:root {
+  --color-accent-orange: #ff8d22;
+  --color-accent-purple: #ba92ea;
+  --color-accent-red: #ff616e;
+  --color-accent-blue: #1588e6;
+  --color-accent-green: #99d974;
+  --color-background: #0b2942;
+  --color-background-light: #043254;
+  --color-background-dark: #1a1b26;
+  --color-background-darkest: #011627;
+  --color-outline: #1f385c;
+  --color-text-muted: #afafaf;
+  --color-text: var(--color-accent-green);
+  --color-highlight: #0b2942;
+  --color-white: #fff;
+  --color-highlight: var(--color-accent-orange);
+}
+
+.orange {
+  color: var(--color-accent-orange);
+}
+
+.purple {
+  color: var(--color-accent-purple);
+}
+
+.green {
+  color: var(--color-accent-green);
+}
+
+.highlight {
+  color: var(--color--highlight);
+}

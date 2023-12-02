@@ -1,0 +1,17 @@
+.selected {
+  color: var(--color-text);
+}
+
+.anav-header {
+  display: flex;
+  padding: 1rem 0rem;
+  width: 100%;
+  background-color: var(--color-background);
+}
+
+.anav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}

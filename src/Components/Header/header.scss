@@ -1,0 +1,140 @@
+@import "../../../node_modules/gerillass/scss/gerillass";
+
+.header {
+  position: relative;
+  max-width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-background-darkest);
+
+  border-bottom: 1px solid var(--color-outline);
+
+  &__name {
+    padding-left: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-white);
+    background-color: var(--color-background-darkest);
+
+    @include breakpoint(min, medium) {
+      min-width: 20rem;
+      border-right: 1px solid var(--color-outline);
+    }
+
+    img {
+      width: 1.5rem;
+    }
+
+    i {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__menu {
+    @include breakpoint(min, medium) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+
+    &__inner {
+      display: none;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+
+      @include breakpoint(min, medium) {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+      }
+    }
+
+    &__outer {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 0 1rem;
+      border-left: 1px solid var(--color-outline);
+      height: 100%;
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--color-text-muted);
+        transition: color 0.5s ease-in-out;
+
+        i {
+          font-size: 1.4rem;
+        }
+
+        :hover {
+          color: var(--color-highlight);
+        }
+      }
+
+      @include breakpoint(min, medium) {
+        display: flex;
+      }
+    }
+
+    @include breakpoint(min, medium) {
+      width: 100%;
+      justify-content: space-between;
+      background-color: var(--color-background-darkest);
+    }
+  }
+}
+
+.visible {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 3.4rem;
+  height: calc(100vh - 5.3rem);
+  background-color: var(--color-background-darkest);
+}
+
+.header-tab {
+  color: var(--color-text-muted);
+  user-select: none;
+  border-top: 1px solid var(--color-outline);
+  border-bottom: 1px solid var(--color-outline);
+  padding: 1rem;
+
+  @include breakpoint(min, medium) {
+    border-top: none;
+    border-bottom: none;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--color-outline);
+    border-bottom: 1px solid transparent;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 125ms color ease-in-out;
+  }
+
+  &:hover {
+    color: var(--color-accent-purple);
+  }
+}
+
+.header-tab__visible {
+  color: #fff;
+  border-bottom: 1px solid var(--color-accent-orange);
+}

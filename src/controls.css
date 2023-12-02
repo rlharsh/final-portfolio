@@ -124,10 +124,13 @@
   content: "\a\a";
   white-space: pre;
 }
+.markdown-content img {
+  max-width: 100%;
+}
 .markdown-content code {
-  margin-top: 1rem;
-  padding: 1rem;
   color: var(--color-accent-green);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .markdown-content code:after {
   content: "\a\a";

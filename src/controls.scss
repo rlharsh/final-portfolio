@@ -129,10 +129,14 @@
     white-space: pre;
   }
 
+  img {
+    max-width: 100%;
+  }
+
   code {
-    margin-top: 1rem;
-    padding: 1rem;
     color: var(--color-accent-green);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 
     &:after {
       content: "\a\a";

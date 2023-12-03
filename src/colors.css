@@ -35,3 +35,7 @@
 .white {
   color: #fff !important;
 }
+
+.purple {
+  color: var(--color-accent-purple);
+}

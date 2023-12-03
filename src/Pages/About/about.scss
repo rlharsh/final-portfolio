@@ -17,6 +17,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  overflow-y: hidden;
 
   @include breakpoint(min, medium) {
     max-height: 100%;
@@ -50,23 +51,58 @@
   }
 }
 
+.tab-tracker {
+  display: flex;
+  min-width: 100%;
+  max-width: 80%;
+  flex-direction: column;
+
+  @include breakpoint(min, medium) {
+    min-width: 0%;
+    flex-direction: column;
+  }
+
+  &__data {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(min, medium) {
+      flex-direction: row;
+    }
+  }
+
+  &__tabs {
+    display: none;
+    min-height: 2.5rem;
+    border-bottom: 1px solid var(--color-outline);
+
+    @include breakpoint(min, medium) {
+      display: block;
+    }
+  }
+}
+
 .content-container {
+  min-height: 100%;
   max-width: 100%;
   overflow-y: auto;
 
   @include breakpoint(min, medium) {
-    width: calc(50% - 4rem - 6rem);
+    width: calc(100% - 4rem - 6rem);
     border-right: 1px solid var(--color-outline);
   }
 }
 
 .code-container {
+  min-height: 100%;
   padding: 1rem;
   max-width: 100%;
   overflow-y: auto;
 
   @include breakpoint(min, medium) {
-    width: calc(50% - 4rem - 6rem);
+    width: calc(100% - 4rem - 6rem);
     border-right: 1px solid var(--color-outline);
   }
 }

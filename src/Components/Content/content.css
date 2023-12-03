@@ -4,6 +4,11 @@
   overflow-y: auto;
   padding: 1rem;
 }
+@media (min-width: 768px) {
+  .code-wrapper {
+    padding-bottom: 6rem;
+  }
+}
 
 .content-wrapper {
   max-height: 100%;

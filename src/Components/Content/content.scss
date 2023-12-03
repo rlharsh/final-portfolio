@@ -1,8 +1,14 @@
+@import "../../../node_modules/gerillass/scss/gerillass";
+
 .code-wrapper {
   max-height: 100%;
   height: 100%;
   overflow-y: auto;
   padding: 1rem;
+
+  @include breakpoint(min, medium) {
+    padding-bottom: 6rem;
+  }
 }
 
 .content-wrapper {

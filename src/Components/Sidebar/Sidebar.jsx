@@ -3,11 +3,9 @@ import React, { useContext } from "react";
 // Import the Sidebar stylesheet.
 import "./sidebar.css";
 import { DataSet } from "../../Providers/SectionProvider";
-import { useLocation } from "react-router-dom";
 
 const Sidebar = () => {
   const { subSection, setSection } = useContext(DataSet);
-  console.log(subSection);
 
   const handleClick = (section, title) => {
     setSection(section, title);

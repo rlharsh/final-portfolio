@@ -62,7 +62,7 @@ const MDProcessor = ({ sectionName, title }) => {
     <div className="code-block-container">
       <div className="code-block-container__header">
         <h1>
-          <i class="ri-code-line"></i>
+          <i className="ri-code-line"></i>
           {title}
         </h1>
         <button className="button button--clear">

@@ -5,6 +5,7 @@ import "./about.css";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import Content from "../../Components/Content/Content";
 import AboutNavigation from "../../Components/AboutNavigation/AboutNavigation";
+import TabController from "../../Components/TabController/TabController";
 
 const About = () => {
   return (
@@ -17,10 +18,17 @@ const About = () => {
           <AboutNavigation />
         </nav>
       </div>
-      <div className="content-container">
-        <Content />
+      <div className="tab-tracker">
+        <div className="tab-tracker__tabs">
+          <TabController />
+        </div>
+        <div className="tab-tracker__data">
+          <div className="content-container">
+            <Content />
+          </div>
+          <div className="code-container scrollbar">Code Container</div>
+        </div>
       </div>
-      <div className="code-container scrollbar"></div>
     </div>
   );
 };

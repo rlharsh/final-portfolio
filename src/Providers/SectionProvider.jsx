@@ -14,10 +14,6 @@ const SectionProvider = ({ children }) => {
     text: summaryData?.text || "",
   });
 
-  useEffect(() => {
-    console.log(subSection);
-  }, [subSection]);
-
   const setSection = (name, title) => {
     const sectionData = DataSections.find((section) => section.name === name);
 

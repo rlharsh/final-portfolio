@@ -1,4 +1,4 @@
-# My Skills
+# Professional Skills
 
 Skills are an important aspect of what I do, and each day I strive to make progress in learning new, valuable skills that assist me to deliver quality content. Some of my most valuable skills are:
 

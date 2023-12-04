@@ -1,4 +1,4 @@
-# Developmental Philosophy
+# Professional Philosophy
 
 My unique developmental philosophy is centered around the idea that technology should **simplify life**, not complicate it. I **firmly** believe in creating software that **enhances** productivitym **enriches** user experience & engagement, and is **accessible** to everyone.
 

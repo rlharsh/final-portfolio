@@ -60,7 +60,6 @@
   border-radius: 4px;
   line-height: 1.5rem;
   color: #fff;
-  outline: 1px solid var(--color-outline);
 }
 .code-block-container__header {
   font-size: 0.8rem;
@@ -98,7 +97,7 @@
   /* Optional: Change scrollbar thumb on hover */
 }
 .scrollbar::-webkit-scrollbar {
-  width: 10px; /* Adjust width of the scrollbar */
+  width: 20px; /* Adjust width of the scrollbar */
   border-left: 1px solid var(--color-outline);
   opacity: 50%;
 }

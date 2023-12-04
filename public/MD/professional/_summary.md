@@ -1,3 +1,5 @@
+# Professional Summary
+
 Hello, I'm **Ronald**,
 
 In 2022, I embarked on a transformative journey to better myself and pursue my passion for technology by enrolling in a Web Application Development degree at my local College. Just a year into this journey, I've plunged into the depths of web-application development, mastering technologies like **ReactJS**, **JavaScript**, **Node.js**, and turning what once seemed impossible into a reality.

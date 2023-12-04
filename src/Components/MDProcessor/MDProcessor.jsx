@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import hljs from "highlight.js";
-
 import "highlight.js/styles/night-owl.css";
 import { DataSet } from "../../Providers/SectionProvider";
 import Markdown from "marked-react";
@@ -13,7 +12,8 @@ const MDProcessor = ({ sectionName, title }) => {
   const codeRef = useRef();
 
   useEffect(() => {
-    const fetchMarkdown = async () => {
+    async function fetchMarkdown() {
+      setLoading(true);
       try {
         const response = await fetch(`/MD/${sectionName}/${title}`);
         if (!response.ok) {
@@ -22,29 +22,16 @@ const MDProcessor = ({ sectionName, title }) => {
         const text = await response.text();
         setMarkdownContent(text);
       } catch (error) {
-        console.error(`Failed to load markdown file: ${error}`);
-        setMarkdownContent("Failed to load content.");
+        setMarkdownContent(`Failed to load content: ${error.message}`);
       } finally {
         setLoading(false);
       }
-    };
+    }
 
     fetchMarkdown();
   }, [sectionName, title]);
 
   useEffect(() => {
-    if (codeRef.current) {
-      // Remove the class and data attribute to avoid the error
-      codeRef.current.classList.remove("hljs");
-      delete codeRef.current.dataset.highlighted;
-
-      // Apply highlighting
-      hljs.highlightElement(codeRef.current);
-    }
-  }, [markdownContent]); // Depend on markdownContent
-
-  useEffect(() => {
-    // Only attempt to highlight if codeShowing is true and the code block is mounted in the DOM
     if (codeShowing && codeRef.current) {
       hljs.highlightElement(codeRef.current);
     }
@@ -62,30 +49,23 @@ const MDProcessor = ({ sectionName, title }) => {
     <div className="code-block-container">
       <div className="code-block-container__header">
         <h1>
-          <i className="ri-code-line"></i>
-          {title}
+          <i className="ri-code-line"></i> {title}
         </h1>
-        <button className="button button--clear">
-          <i className="ri-clipboard-fill"></i>
-        </button>
       </div>
-      {/* This pre and code block is for displaying code, if needed */}
-      {codeShowing && (
+      {codeShowing ? (
         <pre>
           <code ref={codeRef} className="hljs md code-block">
             {markdownContent}
           </code>
         </pre>
-      )}
-      {/* This div is for displaying rendered markdown content */}
-      {!codeShowing && (
+      ) : (
         <div className="markdown-content">
           <Markdown>{markdownContent}</Markdown>
         </div>
       )}
       <div className="code-footer">
         <button onClick={toggleCode} className="btn">
-          <p>Toggle Code</p>
+          Toggle Code
         </button>
       </div>
     </div>

@@ -1,24 +1,13 @@
 import React, { useContext, useState } from "react";
 import { DataSet } from "../../Providers/SectionProvider";
-
-// Import the AboutNavigation stylesheet.
 import "./aboutnavigation.css";
 
 const AboutNavigation = () => {
-  // Setup the section data provider.
   const { subSection, setSection } = useContext(DataSet);
-
-  // Setup the expanded state.
   const [expanded, setExpanded] = useState(true);
 
-  // Handle the title click event.
   const toggleExpandedState = () => {
     setExpanded((prevState) => !prevState);
-  };
-
-  // Handle the change of documents.
-  const handleDocument = (title) => {
-    setSection(subSection.section, title);
   };
 
   return (
@@ -29,21 +18,15 @@ const AboutNavigation = () => {
           {subSection.section}
         </button>
       </div>
-      <div className="anav-items pointer">
-        {subSection.data.map((item, index) =>
-          expanded ? (
-            <div
-              onClick={() => handleDocument(item.title)} // Update here
-              key={index}
-              className={`${item.title === subSection.selected_title ? "selected" : ""}`}
-            >
+      {expanded && (
+        <div className="anav-items pointer">
+          {subSection.data.map((item) => (
+            <div onClick={() => setSection(subSection.section, item.title)} key={item.id || item.title} className={`item ${item.title === subSection.selected_title ? "selected" : ""}`}>
               <i className="ri-markdown-fill"></i> {item.title}
             </div>
-          ) : (
-            ""
-          )
-        )}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

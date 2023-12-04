@@ -26,7 +26,7 @@ const About = () => {
           <div className="content-container">
             <Content />
           </div>
-          <div className="code-container scrollbar">Code Container</div>
+          <div className="code-container scrollbar">AI COMPONENT</div>
         </div>
       </div>
     </div>

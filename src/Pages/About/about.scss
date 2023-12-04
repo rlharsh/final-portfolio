@@ -39,6 +39,7 @@
     @include breakpoint(min, medium) {
       display: flex;
       width: 4rem;
+      min-width: 4rem;
       border-right: 1px solid var(--color-outline);
     }
   }
@@ -48,14 +49,16 @@
   @include breakpoint(min, medium) {
     border-right: 1px solid var(--color-outline);
     width: 16rem;
+    min-width: 16rem;
   }
 }
 
 .tab-tracker {
   display: flex;
   min-width: 100%;
-  max-width: 80%;
+  width: 100%;
   flex-direction: column;
+  height: 100%;
 
   @include breakpoint(min, medium) {
     min-width: 0%;

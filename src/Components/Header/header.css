@@ -129,7 +129,7 @@
   }
 }
 .header-tab:hover {
-  color: var(--color-accent-purple);
+  color: var(--color-accent-orange);
 }
 
 .header-tab__visible {

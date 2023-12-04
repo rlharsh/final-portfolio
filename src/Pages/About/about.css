@@ -37,6 +37,7 @@
   .about-container .sidebar {
     display: flex;
     width: 4rem;
+    min-width: 4rem;
     border-right: 1px solid var(--color-outline);
   }
 }
@@ -45,14 +46,16 @@
   .nav-container {
     border-right: 1px solid var(--color-outline);
     width: 16rem;
+    min-width: 16rem;
   }
 }
 
 .tab-tracker {
   display: flex;
   min-width: 100%;
-  max-width: 80%;
+  width: 100%;
   flex-direction: column;
+  height: 100%;
 }
 @media (min-width: 768px) {
   .tab-tracker {

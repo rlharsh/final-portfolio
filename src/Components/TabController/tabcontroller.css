@@ -14,7 +14,7 @@
   padding: 0 0.5rem 0 1rem;
   border: 1px solid var(--color-outline);
   cursor: pointer;
-  transition: color 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 .nav-tab button {
   color: var(--color-text-muted);
@@ -23,5 +23,5 @@
   color: var(--color-white);
 }
 .nav-tab:hover {
-  color: var(--color-accent-green);
+  color: var(--color-accent-red);
 }

@@ -1,12 +1,12 @@
 .selected {
-  color: var(--color-text);
+  color: var(--color-accent-orange);
 }
 
 .anav-header {
   display: flex;
   padding: 1rem 0rem;
   width: 100%;
-  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-outline);
 }
 
 .anav-items {

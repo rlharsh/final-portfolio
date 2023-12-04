@@ -8,7 +8,7 @@ import Markdown from "marked-react";
 const MDProcessor = ({ sectionName, title }) => {
   const [markdownContent, setMarkdownContent] = useState("");
   const [loading, setLoading] = useState(true);
-  const [codeShowing, setCodeShowing] = useState(true);
+  const [codeShowing, setCodeShowing] = useState(false);
 
   const codeRef = useRef();
 
@@ -84,8 +84,8 @@ const MDProcessor = ({ sectionName, title }) => {
         </div>
       )}
       <div className="code-footer">
-        <button onClick={toggleCode} className="button button--clear">
-          {codeShowing ? "Show Rendered Content" : "Show Code"}
+        <button onClick={toggleCode} className="btn">
+          <p>Toggle Code</p>
         </button>
       </div>
     </div>

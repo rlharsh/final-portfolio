@@ -22,7 +22,7 @@ const AboutNavigation = () => {
   };
 
   return (
-    <div className="no-select">
+    <div className="box no-select">
       <div className="anav-header">
         <button onClick={toggleExpandedState} className="button button--clear white">
           {expanded ? <i className="ri-arrow-down-s-fill"></i> : <i className="ri-arrow-right-s-fill"></i>}

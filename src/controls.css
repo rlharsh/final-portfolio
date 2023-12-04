@@ -35,11 +35,28 @@
   cursor: pointer;
 }
 
+.btn {
+  border: none;
+  background-color: var(--color-accent-orange);
+  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1rem;
+  font-weight: 500;
+  color: var(--color-background-darkest);
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+.btn:hover {
+  background-color: var(--color-background);
+  color: var(--color-white);
+}
+
 .code-block-container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 1rem;
   border-radius: 4px;
   line-height: 1.5rem;
   color: #fff;
@@ -94,7 +111,7 @@
 }
 
 .path-selected {
-  color: var(--color-text) !important;
+  color: var(--color-accent-purple) !important;
 }
 
 .not-visible {
@@ -105,16 +122,14 @@
   display: flex;
   justify-content: center;
   margin: 1rem;
-}
-.code-footer button {
-  padding: 1rem;
-  outline: 1px solid var(--color-outline);
+  padding-bottom: 2rem;
 }
 
 .markdown-content {
   padding: 1rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  color: var(--color-text-muted);
 }
 .markdown-content strong {
   font-weight: 700;
@@ -127,6 +142,10 @@
 .markdown-content img {
   max-width: 100%;
 }
+.markdown-content h1 {
+  font-weight: 700;
+  color: var(--color-accent-purple);
+}
 .markdown-content code {
   color: var(--color-accent-green);
   word-wrap: break-word;
@@ -135,4 +154,8 @@
 .markdown-content code:after {
   content: "\a\a";
   white-space: pre;
+}
+
+.box {
+  border-bottom: 1px solid var(--color-outline);
 }

@@ -143,8 +143,14 @@
   max-width: 100%;
 }
 .markdown-content h1 {
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-accent-purple);
+}
+.markdown-content h2 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--color-accent-orange);
 }
 .markdown-content code {
   color: var(--color-accent-green);

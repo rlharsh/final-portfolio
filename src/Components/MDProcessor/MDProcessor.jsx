@@ -8,7 +8,7 @@ import Markdown from "marked-react";
 const MDProcessor = ({ sectionName, title }) => {
   const [markdownContent, setMarkdownContent] = useState("");
   const [loading, setLoading] = useState(true);
-  const [codeShowing, setCodeShowing] = useState(false);
+  const [codeShowing, setCodeShowing] = useState(true);
 
   const codeRef = useRef();
 

@@ -18,9 +18,6 @@ const NavigationSets = [
         title: "_goals.md",
       },
       {
-        title: "_interest.md",
-      },
-      {
         title: "_acheivements.md",
       },
     ],
@@ -55,10 +52,6 @@ const informationData = [
   {
     title: "_goals.md",
     text: "These are my goals!",
-  },
-  {
-    title: "_interest.md",
-    text: "These are my interest.",
   },
   {
     title: "_acheivements.md",

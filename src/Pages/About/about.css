@@ -14,12 +14,14 @@
   display: flex;
   flex-direction: column;
   overflow-y: hidden;
+  gap: 2rem;
 }
 @media (min-width: 768px) {
   .about-container {
     max-height: 100%;
     height: 100%;
     flex-direction: row;
+    gap: 0rem;
   }
 }
 .about-container .nav {
@@ -99,9 +101,8 @@
 
 .code-container {
   min-height: 100%;
-  padding: 1rem;
   max-width: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 @media (min-width: 768px) {
   .code-container {

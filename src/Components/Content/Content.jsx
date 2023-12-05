@@ -10,7 +10,7 @@ const Content = () => {
   const { subSection, setSection } = useContext(DataSet);
 
   return (
-    <div className="code-wrapper scrollbar">
+    <div className="code-wrapper">
       <MDProcessor sectionName={subSection.section} title={subSection.selected_title} />
     </div>
   );

@@ -4,10 +4,8 @@ import React, { useEffect, useState } from "react";
 import "./header.css";
 import { useLocation, useNavigate } from "react-router-dom";
 
-// Import the images
-import PandaImage from "../../Assets/images/panda.svg";
-
 const Header = () => {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Menu toggle functionality
@@ -34,6 +32,10 @@ const Header = () => {
     },
   ];
 
+  const gotoContact = () => {
+    navigate("/contact");
+  };
+
   // Responsible for rendering the navigation tabs.
   const renderTabs = () => {
     return buttonTabs.map((buttonTab, index) => (
@@ -57,7 +59,7 @@ const Header = () => {
       <nav className={`header__nav`}>
         <div className={`header__nav__inner ${menuOpen ? "visible" : ""}`}>{renderTabs()}</div>
         <div className="header__nav__outer">
-          <button className="button button--clear">
+          <button className="button button--clear" onClick={gotoContact}>
             <i className="ri-mail-fill"></i> _contact_me
           </button>
         </div>

@@ -2,6 +2,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -16,13 +18,13 @@
   box-sizing: border-box;
   padding-right: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 100%));
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 22rem));
   grid-auto-rows: minmax(min-content, max-content);
   gap: 2.5rem;
-  justify-content: center;
 }
 @media (min-width: 768px) {
   .projects-container__left {
+    justify-content: center;
     overflow-y: auto;
     padding: 1rem;
     width: 50%;
@@ -31,12 +33,12 @@
   }
 }
 .projects-container__right {
-  padding: 1rem;
   white-space: pre-line;
 }
 @media (min-width: 768px) {
   .projects-container__right {
     width: 50%;
+    padding: 1rem;
   }
 }
 @media (min-width: 768px) {

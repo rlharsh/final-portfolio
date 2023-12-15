@@ -6,6 +6,7 @@ import Sidebar from "../../Components/Sidebar/Sidebar";
 import Content from "../../Components/Content/Content";
 import AboutNavigation from "../../Components/AboutNavigation/AboutNavigation";
 import TabController from "../../Components/TabController/TabController";
+import ContactCard from "../../Components/ContactCard/ContactCard";
 
 const About = () => {
   return (
@@ -16,6 +17,7 @@ const About = () => {
       <div className="nav-container">
         <nav className="nav">
           <AboutNavigation />
+          <ContactCard />
         </nav>
       </div>
       <div className="tab-tracker">
@@ -26,7 +28,7 @@ const About = () => {
           <div className="content-container">
             <Content />
           </div>
-          <div className="code-container scrollbar">AI COMPONENT</div>
+          <div className="code-container scrollbar">code</div>
         </div>
       </div>
     </div>

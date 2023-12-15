@@ -28,7 +28,7 @@ const ContactCard = () => {
         <div className="anav-items pointer">
           <div className="contact-box">
             <i className="ri-mail-fill"></i>
-            <p>ronald.harsh@protonmail.com</p>
+            <p>rharsh360@gmail.com</p>
           </div>
           <div className="contact-box">
             <i class="ri-phone-fill"></i>

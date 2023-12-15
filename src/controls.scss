@@ -39,16 +39,16 @@ textarea {
 }
 
 .btn {
-  border: none;
+  border: 1px solid var(--color-background-black);
   background-color: var(--color-accent-orange);
   font-family: "Source Code Pro", monospace;
   font-size: 1rem;
   border-radius: 0.5rem;
   padding: 0.6rem 1rem;
   font-weight: 500;
-  color: var(--color-background-darkest);
+  color: var(--color-background-black);
   cursor: pointer;
-  transition: all 250ms ease-in-out;
+  transition: all 150ms ease-in-out;
 
   &:hover {
     background-color: var(--color-background);
@@ -73,10 +73,11 @@ textarea {
     width: 100%;
     padding: 0.2rem;
     color: var(--color-white);
-    background-color: var(--color-background-light);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-outline);
 
     button {
-      font-size: 0.8rem;
+      font-size: 1rem;
       color: var(--color-white);
     }
   }
@@ -101,6 +102,27 @@ textarea {
   /* Styling the scrollbar track */
   &::-webkit-scrollbar {
     width: 20px; /* Adjust width of the scrollbar */
+    border-left: 1px solid var(--color-outline);
+    opacity: 50%;
+  }
+
+  /* Styling the scrollbar handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-background); /* Color of the scrollbar thumb */
+    border-radius: 0px; /* Optional: to make the thumb rounded */
+  }
+
+  /* Optional: Change scrollbar thumb on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--color-background-light); /* Darker shade on hover */
+  }
+}
+
+.scrollbar-thin {
+  /* Styling the scrollbar track */
+  &::-webkit-scrollbar {
+    width: 6px; /* Adjust width of the scrollbar */
+    height: 3px;
     border-left: 1px solid var(--color-outline);
     opacity: 50%;
   }

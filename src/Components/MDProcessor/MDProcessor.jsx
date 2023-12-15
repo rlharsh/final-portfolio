@@ -8,7 +8,7 @@ import Highlight from "react-highlight";
 const MDProcessor = ({ sectionName, title }) => {
   const [markdownContent, setMarkdownContent] = useState("");
   const [loading, setLoading] = useState(true);
-  const [codeShowing, setCodeShowing] = useState(true);
+  const [codeShowing, setCodeShowing] = useState(false);
 
   const codeRef = useRef();
 
@@ -55,7 +55,9 @@ const MDProcessor = ({ sectionName, title }) => {
       </div>
       {codeShowing ? (
         <pre>
-          <Highlight className="hljs md code-block">{markdownContent}</Highlight>
+          <Highlight className="hljs md code-block">
+            {markdownContent}
+          </Highlight>
         </pre>
       ) : (
         <div className="markdown-content">

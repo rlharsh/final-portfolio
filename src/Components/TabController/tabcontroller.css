@@ -1,7 +1,11 @@
 .tabcontroller {
   height: 100%;
   display: flex;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: clip;
+  background-color: var(--color-background-black);
+  width: 50%;
+  border-right: 1px solid var(--color-outline);
 }
 
 .nav-tab {
@@ -12,9 +16,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 0.5rem 0 1rem;
-  border: 1px solid var(--color-outline);
+  border-right: 1px solid var(--color-outline);
+  z-index: 1;
   cursor: pointer;
-  transition: all 150ms ease-in-out;
+  transition: all 50ms ease-in-out;
 }
 .nav-tab button {
   color: var(--color-text-muted);
@@ -23,5 +28,6 @@
   color: var(--color-white);
 }
 .nav-tab:hover {
-  color: var(--color-accent-red);
+  color: var(--color-accent-purple);
+  background-color: var(--color-background-light);
 }

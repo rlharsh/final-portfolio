@@ -4,8 +4,14 @@
   align-items: center;
   gap: 2rem;
   padding: 1rem 0;
+  background-color: var(--color-background-black);
 }
 .sidebar i {
   font-size: 1.4rem;
   color: var(--color-text-muted);
+  transition: all 150ms ease;
+  width: 100%;
+}
+.sidebar i:hover {
+  color: var(--color-text-blue);
 }

@@ -35,7 +35,12 @@ const Header = () => {
   // Responsible for rendering the navigation tabs.
   const renderTabs = () => {
     return buttonTabs.map((buttonTab, index) => (
-      <HeaderTab key={index} path={buttonTab.path}>
+      <HeaderTab
+        key={index}
+        path={buttonTab.path}
+        toggleMenu={toggleMenu}
+        menuOpen={menuOpen}
+      >
         {buttonTab.title}
       </HeaderTab>
     ));
@@ -78,7 +83,7 @@ const Header = () => {
 };
 
 /// Header Tab Component
-const HeaderTab = ({ children, path }) => {
+const HeaderTab = ({ children, path, toggleMenu, menuOpen }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -91,7 +96,12 @@ const HeaderTab = ({ children, path }) => {
       className={`header-tab ${
         location.pathname === path ? "header-tab__visible" : ""
       }`}
-      onClick={tabClick}
+      onClick={() => {
+        if (menuOpen) {
+          toggleMenu();
+        }
+        tabClick();
+      }}
     >
       {children}
     </div>

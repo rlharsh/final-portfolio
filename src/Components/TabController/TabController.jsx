@@ -15,7 +15,9 @@ const TabController = () => {
       return;
     }
 
-    const tabExists = tabs.some((tab) => tab.selected_title === subSection.selected_title);
+    const tabExists = tabs.some(
+      (tab) => tab.selected_title === subSection.selected_title
+    );
 
     if (!tabExists && subSection.selected_title) {
       setTabs([...tabs, subSection]);
@@ -24,14 +26,18 @@ const TabController = () => {
 
   const removeTab = (section) => {
     if (tabs.length > 1) {
-      setTabs((currentTabs) => currentTabs.filter((tab) => tab.selected_title !== section.selected_title));
+      setTabs((currentTabs) =>
+        currentTabs.filter(
+          (tab) => tab.selected_title !== section.selected_title
+        )
+      );
       setClosing(true);
       setSection(tabs[0].section, tabs[0].selected_title);
     }
   };
 
   return (
-    <div className="tabcontroller">
+    <div className="tabcontroller scrollbar-thin">
       {tabs.map((tab) => (
         <NavTab path={tab} key={tab.selected_title} removeTab={removeTab} />
       ))}
@@ -59,7 +65,10 @@ const NavTab = ({ path, removeTab }) => {
   }, [subSection]);
 
   return (
-    <div className={`nav-tab ${selected ? "purple" : ""}`} onClick={handleClick}>
+    <div
+      className={`nav-tab ${selected ? "blue background-select" : ""}`}
+      onClick={handleClick}
+    >
       {path.selected_title}
       <button className="button button--clear" onClick={removeThisTab}>
         <i className="ri-close-line"></i>

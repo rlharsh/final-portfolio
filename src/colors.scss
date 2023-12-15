@@ -1,20 +1,20 @@
 :root {
   --color-accent-orange: #ff8d22;
-  --color-accent-purple: #ba92ea;
+  --color-accent-purple: #bb9af7;
   --color-accent-red: #ff616e;
-  --color-accent-blue: #1588e6;
+  --color-accent-blue: #008cff;
   --color-accent-green: #99d974;
 
-  --color-background: #0b2942;
-  --color-background-light: #043254;
+  --color-background: #202130;
+  --color-background-light: #393b56;
   --color-background-dark: #1a1b26;
-  --color-background-darkest: #011627;
-  --color-background-black: #011221;
-  --color-outline: #1f385c;
-  --color-text-muted: #afafaf;
+  --color-background-darkest: #1a1b26;
+  --color-background-black: #16161e;
+  --color-outline: #101014;
+  --color-text-muted: #9db4c1;
   --color-text-dark: #607b96;
-  --color-text-blue: #5565e8;
-  --color-text: var(--color-accent-green);
+  --color-text-blue: #008cff;
+  --color-text: var(--color-accent-purple);
   --color-highlight: #0b2942;
 
   --color-white: #fff;
@@ -44,4 +44,12 @@
 
 .purple {
   color: var(--color-accent-purple);
+}
+
+.blue {
+  color: var(--color-text-blue);
+}
+
+.background-select {
+  background-color: var(--color-background);
 }

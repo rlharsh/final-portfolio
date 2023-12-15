@@ -6,10 +6,19 @@ import "./home.css";
 const Home = () => {
   return (
     <div className="hero-container flex center no-select">
-      <p>
-        This is my homepage, there are many like it, but this one is mine.
-        Select an option above to get started.
-      </p>
+      <div className="home-box">
+        <div className="splash-one"></div>
+        <div className="splash-two"></div>
+        <div className="home-box__left">
+          <p>Hello, I am</p>
+          <h1>Ronald Harsh</h1>
+          <p>
+            <span className="code-text">&gt; Front-end developer</span>
+          </p>
+          <p className="start">/* to start, click on a tab above */</p>
+        </div>
+        <div className="home-box__right"></div>
+      </div>
     </div>
   );
 };

@@ -4,6 +4,7 @@
   flex-direction: column;
   height: -moz-fit-content;
   height: fit-content;
+  overflow-x: clip;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;

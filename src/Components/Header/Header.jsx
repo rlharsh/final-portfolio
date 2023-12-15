@@ -15,7 +15,7 @@ const Header = () => {
 
   const buttonTabs = [
     {
-      title: "_hello_world",
+      title: "_hello",
       path: "/",
     },
     {

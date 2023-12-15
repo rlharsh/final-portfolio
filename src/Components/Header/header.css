@@ -73,13 +73,13 @@
   align-items: center;
   gap: 0.5rem;
   color: var(--color-text-muted);
-  transition: color 0.5s ease-in-out;
+  transition: color 150ms ease-in-out;
 }
 .header__nav__outer button i {
   font-size: 1.4rem;
 }
-.header__nav__outer button :hover {
-  color: var(--color-highlight);
+.header__nav__outer button:hover {
+  color: var(--color-accent-purple);
 }
 @media (min-width: 768px) {
   .header__nav__outer {

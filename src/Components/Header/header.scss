@@ -81,14 +81,14 @@
         align-items: center;
         gap: 0.5rem;
         color: var(--color-text-muted);
-        transition: color 0.5s ease-in-out;
+        transition: color 150ms ease-in-out;
 
         i {
           font-size: 1.4rem;
         }
 
-        :hover {
-          color: var(--color-highlight);
+        &:hover {
+          color: var(--color-accent-purple);
         }
       }
 

@@ -55,11 +55,17 @@ const Projects = () => {
           <div>
             <pre class="pre">
               <Highlight className="hljs md code-block">
-                {currentProject.long_description ||
-                  "**Select a project to view more information."}
+                {currentProject.long_description
+                  ? currentProject.long_description
+                  : "**Select a project to view more information.**"}
               </Highlight>
             </pre>
           </div>
+        )}
+        {!currentProject && (
+          <Highlight className="hljs md code-block">
+            **Select a project to view more information.**
+          </Highlight>
         )}
       </div>
     </div>

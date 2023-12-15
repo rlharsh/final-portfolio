@@ -3,6 +3,7 @@ import hljs from "highlight.js";
 import "highlight.js/styles/night-owl.css";
 import { DataSet } from "../../Providers/SectionProvider";
 import Markdown from "marked-react";
+import Highlight from "react-highlight";
 
 const MDProcessor = ({ sectionName, title }) => {
   const [markdownContent, setMarkdownContent] = useState("");
@@ -54,9 +55,7 @@ const MDProcessor = ({ sectionName, title }) => {
       </div>
       {codeShowing ? (
         <pre>
-          <code ref={codeRef} className="hljs md code-block">
-            {markdownContent}
-          </code>
+          <Highlight className="hljs md code-block">{markdownContent}</Highlight>
         </pre>
       ) : (
         <div className="markdown-content">

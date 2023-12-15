@@ -9,6 +9,7 @@ import About from "./Pages/About/About";
 import SideLayout from "./Layouts/SideLayout";
 import NormalLayout from "./Layouts/NormalLayout";
 import Contact from "./Pages/Contact/Contact";
+import Projects from "./Pages/Projects/Projects";
 
 function App() {
   return (
@@ -23,7 +24,9 @@ function App() {
             <Route path="/contact" element={<SideLayout />}>
               <Route index element={<Contact />} />
             </Route>
-            <Route path="/projects" element={<NormalLayout />}></Route>
+            <Route path="/projects" element={<NormalLayout />}>
+              <Route index element={<Projects />} />
+            </Route>
             <Route path="/blog" element={<NormalLayout />}></Route>
           </Route>
         </Routes>

@@ -26,10 +26,6 @@ const Header = () => {
       title: "_my_projects",
       path: "/projects",
     },
-    {
-      title: "_blog",
-      path: "/blog",
-    },
   ];
 
   const gotoContact = () => {
@@ -57,7 +53,9 @@ const Header = () => {
 
       {/* Navigation Tabs */}
       <nav className={`header__nav`}>
-        <div className={`header__nav__inner ${menuOpen ? "visible" : ""}`}>{renderTabs()}</div>
+        <div className={`header__nav__inner ${menuOpen ? "visible" : ""}`}>
+          {renderTabs()}
+        </div>
         <div className="header__nav__outer">
           <button className="button button--clear" onClick={gotoContact}>
             <i className="ri-mail-fill"></i> _contact_me
@@ -68,7 +66,11 @@ const Header = () => {
       {/* Menu Toggle Button */}
       <div className="header__menu">
         <button className="button button--clear" onClick={toggleMenu}>
-          <i className={menuOpen ? `ri-menu-fold-line orange` : `ri-menu-unfold-line`}></i>
+          <i
+            className={
+              menuOpen ? `ri-menu-fold-line orange` : `ri-menu-unfold-line`
+            }
+          ></i>
         </button>
       </div>
     </header>
@@ -85,7 +87,12 @@ const HeaderTab = ({ children, path }) => {
   };
 
   return (
-    <div className={`header-tab ${location.pathname === path ? "header-tab__visible" : ""}`} onClick={tabClick}>
+    <div
+      className={`header-tab ${
+        location.pathname === path ? "header-tab__visible" : ""
+      }`}
+      onClick={tabClick}
+    >
       {children}
     </div>
   );

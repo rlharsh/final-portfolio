@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./contactcard.css";
 
 const ContactCard = () => {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
 
   const toggleExpandedState = () => {
     setExpanded((prevState) => !prevState);
@@ -12,8 +12,15 @@ const ContactCard = () => {
   return (
     <div className="box no-select">
       <div className="anav-header">
-        <button onClick={toggleExpandedState} className="button button--clear white">
-          {expanded ? <i className="ri-arrow-down-s-fill"></i> : <i className="ri-arrow-right-s-fill"></i>}
+        <button
+          onClick={toggleExpandedState}
+          className="button button--clear white"
+        >
+          {expanded ? (
+            <i className="ri-arrow-down-s-fill"></i>
+          ) : (
+            <i className="ri-arrow-right-s-fill"></i>
+          )}
           contacts
         </button>
       </div>

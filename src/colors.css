@@ -11,6 +11,8 @@
   --color-background-black: #011221;
   --color-outline: #1f385c;
   --color-text-muted: #afafaf;
+  --color-text-dark: #607b96;
+  --color-text-blue: #5565e8;
   --color-text: var(--color-accent-green);
   --color-highlight: #0b2942;
   --color-white: #fff;

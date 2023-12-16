@@ -15,6 +15,7 @@
   flex-direction: column;
   overflow-y: hidden;
   gap: 2rem;
+  background-color: var(--color-background-black);
 }
 @media (min-width: 768px) {
   .about-container {

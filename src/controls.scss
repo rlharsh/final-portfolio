@@ -162,11 +162,12 @@ textarea {
 .markdown-content {
   word-wrap: break-word;
   overflow-wrap: break-word;
+  line-height: 1.5rem;
   color: var(--color-text-muted);
 
   strong {
     font-weight: 700;
-    color: var(--color-accent-green);
+    color: var(--color-text-blue);
   }
 
   p::after {
@@ -182,11 +183,13 @@ textarea {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-accent-purple);
+    margin-bottom: 1rem;
   }
 
   h2 {
     font-weight: 500;
     font-size: 1.2rem;
+    margin-bottom: 1rem;
     color: var(--color-accent-orange);
   }
 

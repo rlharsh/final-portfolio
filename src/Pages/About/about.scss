@@ -19,6 +19,7 @@
   flex-direction: column;
   overflow-y: hidden;
   gap: 2rem;
+  background-color: var(--color-background-black);
 
   @include breakpoint(min, medium) {
     max-height: 100%;

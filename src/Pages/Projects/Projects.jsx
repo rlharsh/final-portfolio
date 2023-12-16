@@ -79,11 +79,11 @@ const Projects = () => {
         {currentProject ? (
           viewState === 0 ? (
             <div>
-              <pre className="pre">
-                <Highlight className="hljs md code-block">
+              <pre className="pre markdown-content">
+                <Markdown className="hljs md code-block">
                   {currentProject.long_description ||
                     "Select a project to view more information."}
-                </Highlight>
+                </Markdown>
               </pre>
             </div>
           ) : viewState === 1 ? (

@@ -12,7 +12,7 @@
   --color-outline: #101014;
   --color-text-muted: #9db4c1;
   --color-text-dark: #607b96;
-  --color-text-blue: #008cff;
+  --color-text-blue: hsl(207, 100%, 70%);
   --color-text: var(--color-accent-purple);
   --color-highlight: #0b2942;
   --color-white: #fff;

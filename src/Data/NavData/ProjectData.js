@@ -9,7 +9,7 @@ const ProjectData = [
     slug: "_note-editor",
     short_description: "A online markdown editor, used to capture notes.",
     image: markdownImage,
-    view_url: "https://resonant-halva-97d14f.netlify.app",
+    view_url: "https://markdown-share.netlify.app/",
     code_url: "https://github.com/rlharsh/markdown-editor",
     long_description: `# Inspiration
 
@@ -41,7 +41,7 @@ The entire program was developed using **React** and consumes several public **A
 
 This application taught me the importance of verifying data, and ensuring that all conditions and edge-cases are met. This piece of software utilizes multiple checks and balances to ensure the data in-transit is correct before serving to the end-user. Furthermore, this is the first project I ever developed that utilizes browser audio.`,
     image: dictionaryImage,
-    view_url: "https://creative-moxie-076da4.netlify.app/",
+    view_url: "https://online-dictionary-ronald.netlify.app/",
     code_url: "https://github.com/rlharsh/react-dictionary",
   },
   {
@@ -63,7 +63,7 @@ The entire program was developed using **React** and utlizes **Socket.io** for t
 
 I learned a great many deal of things when developing this application, such as practical **Socket.io** techniques, as well as the convenience of proper code formatting. This project is actually one of my **favorite** projects that I have worked on.`,
     image: chatImage,
-    view_url: "https://zesty-axolotl-4bec7a.netlify.app/",
+    view_url: "https://anonymous-chatting-ronald.netlify.app/",
     code_url: "https://github.com/rlharsh/chat-client",
   },
   {

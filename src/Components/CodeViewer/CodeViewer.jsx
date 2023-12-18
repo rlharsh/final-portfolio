@@ -43,7 +43,6 @@ export const CodeCard = ({ entry }) => {
         <div className="card-header__title">
           <h2>{entry.fields.title}</h2>
           <p>{entry.fields.dateCreated}</p>
-          {console.log(entry)}
         </div>
         <div>
           <button className="btn" onClick={toggleExplanation}>

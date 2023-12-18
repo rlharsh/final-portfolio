@@ -6,9 +6,11 @@
   flex-direction: column;
   height: fit-content;
   overflow-x: clip;
+  gap: 2rem;
 
   @include breakpoint(min, medium) {
     flex-direction: row;
+    gap: 0;
   }
 
   user-select: none;

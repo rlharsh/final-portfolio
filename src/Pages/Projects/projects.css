@@ -5,6 +5,7 @@
   height: -moz-fit-content;
   height: fit-content;
   overflow-x: clip;
+  gap: 2rem;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -12,6 +13,7 @@
 @media (min-width: 768px) {
   .projects-container {
     flex-direction: row;
+    gap: 0;
   }
 }
 .projects-container__left {

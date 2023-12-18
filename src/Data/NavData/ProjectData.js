@@ -1,6 +1,7 @@
 import markdownImage from "../../Assets/images/MARKDOWN.jpg";
 import dictionaryImage from "../../Assets/images/DICTIONARY.jpg";
 import chatImage from "../../Assets/images/CHAT.jpg";
+import lockImage from "../../Assets/images/LOCK.jpg";
 
 const ProjectData = [
   {
@@ -18,7 +19,7 @@ My Markdown Editor was part of a coding challenge from **frontendmentor.io** whi
 
 The program was written in React and utilizes **JSX** for the frontend. The backend system leverages the power of **Firebase** for the data delivery network. Currently it allows users to sign-up with email, their **Google** account, and provides unlimited access to their online files. This project for me is one that I am very pleased with, since I pride myself with my level of note-taking.
 
-### What I learned
+## What I learned
 
 During the creation of this project I learned a great deal, everything from UI design to application scopes. Furthermore, this is the first project that employs a fully-fledged database for content management. This application allows users anywhere access to their online notes.`,
   },
@@ -58,12 +59,32 @@ Anonymous chat is designed in such a way, that you can view all of the participa
 
 The entire program was developed using **React** and utlizes **Socket.io** for the backend, the backend itself was developed using **Node** as the primary framework. The application does not store chat history **this is by design** and users can remain anonymous whilst in the chatroom. For security reasons, sharing of images is not allowed within any room.
 
-### What I learned
+## What I learned
 
 I learned a great many deal of things when developing this application, such as practical **Socket.io** techniques, as well as the convenience of proper code formatting. This project is actually one of my **favorite** projects that I have worked on.`,
     image: chatImage,
     view_url: "https://zesty-axolotl-4bec7a.netlify.app/",
     code_url: "https://github.com/rlharsh/chat-client",
+  },
+  {
+    title: "Password",
+    slug: "_password_generator",
+    short_description:
+      "An online password generator, designed for strong password generation.",
+    view_url: "https://password-gens.netlify.app/",
+    code_url: "https://github.com/rlharsh/Password-Generator",
+    image: lockImage,
+    long_description: `# Inspiration
+I was inspired to write this application due to the need of requiring strong passwords that are not easily broken. This project was originally a challenge offered by **Scrimba**, and I had a great time challenging myself while creating it.
+
+## About
+
+This application holds a special place in my heart, as it was one of my earliest projectts that I created. It is written in pure **JavaScript**, and requires no frameworks to run. Looking back now on the project there are **several** things that I probably would have added to the application, such as the option to not allow ambiguious characters. However, as mentioned earlier, this is one of my first projects, and one that really fueled my passion for web-development.
+
+## What I learned
+
+This project actually taught me a great deal about **JavaScript** itself, and what a powerful language it is. I remember going through the code whilst developing this application, and making a lot of assumptions, only to have those assumptions change dynamically in front of me. However, after about a day the application was complete, and it was at that time that I began to really appreciate **JavaScript** and all of the subtle nuances that make it such a great development language.
+    `,
   },
 ];
 

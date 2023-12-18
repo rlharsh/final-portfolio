@@ -7,6 +7,7 @@ import Content from "../../Components/Content/Content";
 import AboutNavigation from "../../Components/AboutNavigation/AboutNavigation";
 import TabController from "../../Components/TabController/TabController";
 import ContactCard from "../../Components/ContactCard/ContactCard";
+import CodeViewer from "../../Components/CodeViewer/CodeViewer";
 
 const About = () => {
   return (
@@ -28,7 +29,9 @@ const About = () => {
           <div className="content-container">
             <Content />
           </div>
-          <div className="code-container scrollbar">code</div>
+          <div className="code-container scrollbar">
+            <CodeViewer />
+          </div>
         </div>
       </div>
     </div>

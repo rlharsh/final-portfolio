@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 
 // Import the TabController stylesheet
 import "./tabcontroller.css";
@@ -8,6 +8,7 @@ const TabController = () => {
   const { subSection, setSection } = useContext(DataSet);
   const [tabs, setTabs] = useState([]);
   const [closing, setClosing] = useState(false);
+  const scrollContainerRef = useRef(null);
 
   useEffect(() => {
     if (closing) {
@@ -22,6 +23,26 @@ const TabController = () => {
     if (!tabExists && subSection.selected_title) {
       setTabs([...tabs, subSection]);
     }
+
+    // Add wheel event listener
+    const handleWheel = (e) => {
+      e.preventDefault();
+      if (scrollContainerRef.current) {
+        scrollContainerRef.current.scrollLeft += e.deltaY;
+      }
+    };
+
+    const scrollContainer = scrollContainerRef.current;
+    if (scrollContainer) {
+      scrollContainer.addEventListener("wheel", handleWheel);
+    }
+
+    // Remove event listener on cleanup
+    return () => {
+      if (scrollContainer) {
+        scrollContainer.removeEventListener("wheel", handleWheel);
+      }
+    };
   }, [subSection]);
 
   const removeTab = (section) => {
@@ -37,7 +58,7 @@ const TabController = () => {
   };
 
   return (
-    <div className="tabcontroller scrollbar-thin">
+    <div className="tabcontroller scrollbar-thin" ref={scrollContainerRef}>
       {tabs.map((tab) => (
         <NavTab path={tab} key={tab.selected_title} removeTab={removeTab} />
       ))}

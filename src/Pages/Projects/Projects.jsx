@@ -22,7 +22,7 @@ const Projects = () => {
           <div className="project-top">
             <div className="project-top__info">
               <p className="project-top-name">{project.title}</p>
-              <p className="project-top-slug">// {project.slug}</p>
+              <p className="project-top-slug">//{project.slug}</p>
             </div>
             <div key={index} className="project">
               <div className="project-header">
